@@ -1,0 +1,33 @@
+# Sample Yml
+
+## Required
+osVersions:
+    - "12"
+    - "13.5"
+## Required
+outputDirectory: "./fastlane/Screenshots"
+## Optional(Default: fastlane snapshot)
+snapshotExecutableCommand:  "bundle exec fastlane snapshot"
+## Optional(Default: false) ※To generate PDF of screenshots.hmtl, 'wkhtmltopdf' is required.
+shouldGeneratePDF: true
+## Optional(Default: Screenshots)
+pdfTitlePrefix: "AppName"
+
+## Optional
+## Notes: 'ios_version' and 'output_directory' parameter will be overridden.
+snapshot:
+    devices:
+        - "iPhone 8"
+        - "iPad (7th generation)"
+    languages:
+        - "ja-JP"
+        - "en-US"
+    scheme: "Develop"
+    sdk: "iphonesimulator"
+    erase_simulator: true
+    dark_mode: true
+    override_status_bar: true
+    stop_after_first_error: true
+    skip_open_summary: false
+    test_without_building: true
+
